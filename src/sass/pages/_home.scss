@@ -1,1 +1,236 @@
 /* home */
+:root{
+    --text-font-size:  clamp(1rem, 2.1vw, 1.7rem);
+    --h1-font-size: clamp(2.4rem, 7vw, 5rem);
+    --h2-font-size: clamp(1.2rem, 4vw, 3rem);
+    --h3-font-size: clamp(1rem, 2vw, 1.5rem);
+    --margin-sides: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+      -webkit-animation-duration: 0.01ms !important;
+              animation-duration: 0.01ms !important;
+      -webkit-animation-iteration-count: 1 !important;
+              animation-iteration-count: 1 !important;
+      -webkit-transition-duration: 0.01ms !important;
+              transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+html{
+    background: #fff;
+    background-image: linear-gradient(#e7dfdf .1em, transparent .1em);
+    background-size: 100% 3em;
+}
+
+body {
+
+    font-size: var(--font-size-text);
+    font-family:"Playpen Sans";
+    line-height: clamp(1.8em, 3vw, 2.5em);
+    margin-inline: clamp(1.5rem, 5vw, 4.5rem);
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 4rem;
+}
+
+main {
+    max-width: 80ch;
+    margin-inline: auto;
+}
+// .container, ul {
+//     max-width: clamp(40ch, 60vw, 80ch);
+//     margin-inline: auto;
+// }
+
+h2{
+    font-size: var(--h2-font-size);
+    font-family: "Rubik Doodle Shadow";
+    line-height: 1.1em;
+    color: #444cf7;
+}
+
+
+
+svg {
+    width: 1em;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+  
+.skip-link:focus,
+.skip-link:focus + header {
+    left: auto;
+    position: relative;
+}
+
+p{
+    font-size: var(--text-font-size);
+    max-width: 60ch;
+}
+
+/** Header section **/
+header {
+    height: 100vh;
+}
+
+
+header div{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    font-family: "Rubik Doodle Shadow";
+}
+
+/** Nav Bar **/
+nav ul {
+    padding-block: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: clamp(0.7rem, 1vw, 1.5rem);
+    list-style: none;
+}
+
+nav li {
+    width: 8ch;
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    padding: 1.5rem;
+   border-image-slice:
+    351 57 232 74;
+    border-image-width:
+    91px 35px 115px 50px;
+    border-image-outset:
+    0px 0px 0px 0px;
+    border-image-repeat:
+    stretch stretch;
+    border-image-source:
+    url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-2.svg");
+    border-style:
+    solid;
+
+    &:hover {
+        animation: var(--animation-spin);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+/** setting stage **/
+article section{
+    padding-block: 4rem;
+    display:grid;
+    gap: 4rem;
+}
+
+
+blockquote{
+
+padding: 3rem;
+    border-image-slice:
+169 96 162 99;
+border-image-width:
+50px 50px 50px 50px;
+border-image-outset:
+0px 0px 0px 0px;
+border-image-repeat:
+stretch stretch;
+border-image-source:
+url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-1.svg");
+border-style:
+solid;
+}
+
+section ul {
+    font-weight:900;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap:2em;
+
+}
+
+section ul li{
+    padding: 1em;
+    border-image-slice:
+    351 57 232 74;
+    border-image-width:
+    91px 35px 115px 50px;
+    border-image-outset:
+    0px 0px 0px 0px;
+    border-image-repeat:
+    stretch stretch;
+    border-image-source:
+    url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-2.svg");
+    border-style:
+    solid;
+
+    &:hover {
+        animation: var(--animation-scale-up);
+    }
+}
+
+h3 {
+    font-size: 3rem;
+    color:red;
+    font-style:oblique;
+    font-family: "Rubik Doodle Shadow";
+}
+
+footer div{
+    display:grid;
+    text-align: center;
+    gap: 1rem;
+    padding: 3rem;
+//     border-image-slice:
+// 169 96 162 99;
+// border-image-width:
+// 50px 50px 50px 50px;
+// border-image-outset:
+// 0px 0px 0px 0px;
+// border-image-repeat:
+// stretch stretch;
+// border-image-source:
+// url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-1.svg");
+// border-style:
+// solid;
+}
+
+
+main footer a {
+    padding: 1em;
+    border-image-slice:
+    351 57 232 74;
+    border-image-width:
+    91px 35px 115px 50px;
+    border-image-outset:
+    0px 0px 0px 0px;
+    border-image-repeat:
+    stretch stretch;
+    border-image-source:
+    url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-2.svg");
+    border-style:
+    solid;
+}
+
+
+
