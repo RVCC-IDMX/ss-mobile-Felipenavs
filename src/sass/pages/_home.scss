@@ -198,7 +198,8 @@ h3 {
 
 footer div{
     display:grid;
-    text-align: center;
+    grid-template-columns: 3;
+    // text-align: center;
     gap: 1rem;
     padding: 3rem;
 //     border-image-slice:
@@ -215,8 +216,17 @@ footer div{
 // solid;
 }
 
+// main footer h3 {
+//     text-align: center;
+//     grid-column-start: 1;
+//     grid-column-end: 4;
+// }
+
+
 
 main footer a {
+    
+    margin-inline: auto;
     padding: 1em;
     border-image-slice:
     351 57 232 74;

@@ -224,12 +224,13 @@ h3 {
 
 footer div {
   display: grid;
-  text-align: center;
+  grid-template-columns: 3;
   gap: 1rem;
   padding: 3rem;
 }
 
 main footer a {
+  margin-inline: auto;
   padding: 1em;
   border-image-slice: 351 57 232 74;
   border-image-width: 91px 35px 115px 50px;
